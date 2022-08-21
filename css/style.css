@@ -3,6 +3,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -23,14 +24,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  /* background-color: #003B36; */
-  background-image: linear-gradient(to bottom, #a39c8e, #c8c4d700);
+  background-color: #ece5f0;
+  /* background-image: linear-gradient(to bottom, #a39c8e, #c8c4d700); */
   font-weight: 500;
   padding: 25px 50px 25px 50px;
   position: sticky;
   top: 0;
+  height: 17vh;
   width: 100vw;
-  height: 140px;
   z-index: 20;
 }
 .header .nav .listaPrincipal {
@@ -43,7 +44,7 @@
   margin: 0 35px 0 35px;
   font-weight: 700;
   text-decoration: none;
-  color: #ece5f0;
+  color: #2b2b2b;
 }
 
 .header .nav .listaPrincipal li a:hover {
@@ -73,23 +74,27 @@ h2 {
 .banner {
   display: flex;
   align-items: center;
+  justify-content: center;
   flex-direction: column;
-  height: 80vh;
+  height: 66vh;
+  z-index: 2;
+  background-color: #2b2b2b;
 }
 
-.banner .imagenBanner {
-  width: 100vw;
-  z-index: -2;
-  position: fixed;
+.imagenBanner {
+  width: 100%;
+  z-index: -10;
+  position: absolute;
   top: 0;
   overflow: hidden;
+  align-items: center;
+  background-color: #635d52;
 }
 
 .banner .presentacionBanner {
   z-index: 2;
   font-size: 100%;
   color: white;
-  margin: 150px 0 0 0;
 }
 
 .servicio-banner {
@@ -97,8 +102,8 @@ h2 {
 }
 
 .realizo1 {
-  font-family: "Poppins", sans-serif;
-  font-size: 625%;
+  font-family: "Bebas Neue", cursive;
+  font-size: 800%;
   margin: 13px;
   color: white;
 }
@@ -143,16 +148,22 @@ h2 {
 }
 
 /* PORTFOLIO */
+.estructura-portfolio { 
+  display: flex;
+  flex-direction: column;
+  margin: 0 0 40px 0;
+}
 
 .container-galeria {
   display: grid;
   max-width: 900px;
-  margin: 0 auto;
+  margin: 0 0 0 0;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: 1fr 1fr;
   grid-template-areas:
     "work1 work2 work3"
-    "work4 work5 work6";
+    "work4 work5 work6"
+    ;
   justify-items: center;
   align-self: center;
   justify-content: center;
@@ -168,21 +179,21 @@ h2 {
   overflow: hidden;
 }
 
-.tituloPortfolio { 
+.tituloPortfolio {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
   margin: 20px 0 20px 0;
-  }
+}
 
-.subtituloPortfolio { 
+.subtituloPortfolio {
   margin: 0 0 0 20px;
 }
 
 /* CONTACTO */
 
-.flex-formulario { 
+.flex-formulario {
   display: flex;
   justify-content: space-between;
   margin: 0 50px 0 0;
@@ -196,7 +207,9 @@ main .formulario {
   margin: 0 100px 0 0;
 }
 
-main form input, textarea, select {
+main form input,
+textarea,
+select {
   font-family: "Montserrat", sans-serif;
 }
 
@@ -252,16 +265,20 @@ main form input, textarea, select {
 /* FOOTER */
 
 .footer {
-  margin: 20px 0 0 0;
+  display: flex;
+  flex-direction: row;
   height: 130px;
+  background-color: #ece5f0;
+  width: 100vw;
+  position: static;
+  bottom: 0;
 }
 
 .footer .listFooter {
   display: flex;
   justify-content: center;
   padding: 25px;
-  margin: 25px 0 0 0;
-  background-color: #a39c8e;
+
   /* background-image: linear-gradient(to top, #a39c8e, #c8c4d700); */
   list-style-type: none;
 }
@@ -271,36 +288,29 @@ main form input, textarea, select {
   margin: 10px;
 }
 
-main {
-  min-height: 80vh;
-  overflow: hidden;
-}
-
 /* MEDIA QUERYS */
 /* formulario 1200 */
 
 @media (max-width: 1070px) {
+  .logoParaleloForm {
+    display: none;
+  }
 
-.logoParaleloForm { 
-  display: none;
-}
+  .flex-formulario {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 50px 0 0;
+    width: 70vw;
+    justify-content: center;
+  }
 
-.flex-formulario { 
-  display: flex;
-  justify-content: space-between;
-  margin: 0 50px 0 0;
-  width: 70vw;
-  justify-content: center;
-}
-
-
-main .formulario {
-  display: flex;
-  justify-content: center;
-  font-family: "Montserrat", sans-serif;
-  font-size: 100%;
-  margin: 0 0 0 150px;
-}
+  main .formulario {
+    display: flex;
+    justify-content: center;
+    font-family: "Montserrat", sans-serif;
+    font-size: 100%;
+    margin: 0 0 0 150px;
+  }
 }
 
 /* 1070PX */
@@ -313,8 +323,8 @@ main .formulario {
     flex-direction: column;
     justify-items: center;
     align-items: center;
-    /* background-color: #635d52; */
-    background-image: linear-gradient(to bottom, #635d52, #c8c4d700);
+    background-color: #ece5f0;
+    /* background-image: linear-gradient(to bottom, #635d52, #c8c4d700); */
     font-weight: 500;
     position: sticky;
     top: 0;
@@ -336,8 +346,7 @@ main .formulario {
     width: max-content;
   }
   .realizo1 {
-    font-family: "Poppins", sans-serif;
-    font-size: 500%;
+    font-size: 800%;
     margin: 13px;
     color: white;
   }
@@ -348,34 +357,33 @@ main .formulario {
     width: max-content;
   }
 
-/* SOBRE MI */
+  /* SOBRE MI */
 
-.infoPersonal {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-content: center;
-  width: 80vw;
-  margin: 0 0 0 35px;
+  .infoPersonal {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    width: 80vw;
+    margin: 0 0 0 35px;
   }
 
-.fotoPerfil {
-  /* margin: 80px 20px 0 285px; */
-  width: 415px;
-  margin: 0 0px 0 0;
+  .fotoPerfil {
+    /* margin: 80px 20px 0 285px; */
+    width: 415px;
+    margin: 0 0px 0 0;
   }
-  
-.textPerfil {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  margin: 15px 0 0 0;
-}
 
-.textDescripcion {
-  width: 80vw;
-}
+  .textPerfil {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: 15px 0 0 0;
+  }
 
+  .textDescripcion {
+    width: 80vw;
+  }
 }
 
 /* 930PX - GALERIA PORTFOLIO*/
@@ -416,8 +424,8 @@ main .formulario {
     flex-direction: row;
     justify-items: center;
     align-items: center;
-    /* background-color: #635d52; */
-    background-image: linear-gradient(to bottom, #635d52, #c8c4d700);
+    background-color: #ece5f0;
+    /* background-image: linear-gradient(to bottom, #635d52, #c8c4d700); */
     font-weight: 500;
     position: sticky;
     top: 0;
@@ -442,7 +450,7 @@ main .formulario {
   }
   .header .nav .listaPrincipal li a {
     text-decoration: none;
-    color: #ece5f0;
+    color: #2b2b2b;
   }
   .header .nav .listaPrincipal li a:hover {
     color: #f39200;
@@ -450,6 +458,45 @@ main .formulario {
   }
   .header .logoSerafini {
     padding: 0 0 0 0;
+  }
+
+  /* INDEX 749 */
+
+  .banner {
+    grid-area: banner;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .banner .imagenBanner {
+    z-index: -2;
+    position: fixed;
+    width: max-content;
+  }
+  .banner .presentacionBanner {
+    z-index: 2;
+    font-size: 100%;
+    color: white;
+    margin: 0 0 20px 0;
+  }
+
+  .servicio-banner {
+    display: flex;
+  }
+
+  .realizo1 {
+    font-size: 600%;
+    color: white;
+  }
+
+  .boton {
+    border-radius: 30px;
+    width: 200px;
+    height: 30px;
+    background-color: #003b36;
+    color: white;
+    margin: 20px 0 0 0;
   }
 }
 
@@ -484,53 +531,66 @@ main .formulario {
     overflow: hidden;
   }
 
-  .tituloPortfolio { 
+  .tituloPortfolio {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     margin: 20px 0 20px 0;
-    }
-  
-  .subtituloPortfolio { 
+  }
+
+  .subtituloPortfolio {
     margin: 0 0 0 20px;
   }
 }
 
-/* formulario contacto 580 */
-
 @media (max-width: 580px) {
-.logoParaleloForm { 
-  display: none;
-}
+  /* INDEX */
 
-.flex-formulario { 
-  display: flex;
-  justify-content: center;
-  margin: 0 5px 0 70px;
+  .servicio-banner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .realizo1 {
+    font-family: "Bebas Neue", cursive;
+    font-size: 600%;
+    color: white;
+    margin: 0;
+  }
+  /* formulario contacto 580 */
 
-}
+  .logoParaleloForm {
+    display: none;
+  }
 
-main .formulario {
-  display: flex;
-  justify-content: center;
-  font-family: "Montserrat", sans-serif;
-  font-size: 100%;
-  margin: 0 0 0 0;
-  width: 500px;
-}
+  .flex-formulario {
+    display: flex;
+    justify-content: center;
+    margin: 0 5px 0 70px;
+  }
+
+  main .formulario {
+    display: flex;
+    justify-content: center;
+    font-family: "Montserrat", sans-serif;
+    font-size: 100%;
+    margin: 0 0 0 0;
+    width: 500px;
+  }
 }
 
 /* HEADER 415PX */
 
 @media (max-width: 415px) {
+
   .header {
     display: flex;
     flex-direction: row;
     justify-items: center;
     align-items: center;
-    /* background-color: #635d52; */
-    background-image: linear-gradient(to bottom, #635d52, #c8c4d700);
+    background-color: #ece5f0;
+    /* background-image: linear-gradient(to bottom, #635d52, #c8c4d700); */
     font-weight: 500;
     position: sticky;
     top: 0;
@@ -554,7 +614,7 @@ main .formulario {
   }
   .header .nav .listaPrincipal li a {
     text-decoration: none;
-    color: #ece5f0;
+    color: #2b2b2b;
   }
   .header .nav .listaPrincipal li a:hover {
     color: #f39200;
@@ -563,52 +623,9 @@ main .formulario {
   .header .logoSerafini {
     padding: 0 0 0 0;
   }
-}
 
-/* INDEX */
+  /* INDEX */
 
-@media (max-width: 749px) {
-  .banner {
-    grid-area: banner;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-  }
-
-  .banner .imagenBanner {
-    z-index: -2;
-    position: fixed;
-    width: max-content;
-  }
-  .banner .presentacionBanner {
-    z-index: 2;
-    font-size: 100%;
-    color: white;
-    margin: 150px 0 0 0;
-  }
-
-  .servicio-banner {
-    display: flex;
-  }
-
-  .realizo1 {
-    font-family: "Poppins", sans-serif;
-    font-size: 500%;
-    margin: 0 10px 0 10px;
-    color: white;
-  }
-
-  .boton {
-    border-radius: 30px;
-    width: 200px;
-    height: 30px;
-    background-color: #003b36;
-    color: white;
-    margin: 20px 0 0 0;
-  }
-}
-
-@media (max-width: 415px) {
   .banner {
     grid-area: banner;
     display: flex;
@@ -626,7 +643,7 @@ main .formulario {
     font-size: 70%;
     font-weight: 800;
     color: white;
-    margin: 100px 0 20px 0;
+    margin: 50px 0 20px 0;
   }
 
   .servicio-banner {
@@ -636,16 +653,13 @@ main .formulario {
   }
 
   .realizo1 {
-    font-family: "Raleway", sans-serif;
-    font-size: 450%;
+    font-family: "Bebas Neue", cursive;
+    font-size: 650%;
     margin: 0;
-    color: #ece5f0;
+    color: white;
   }
-}
 
-/* SOBRE MI */
-
-@media (max-width: 415px) {
+  /* SOBRE MI */
   .infoPersonal {
     display: flex;
     flex-direction: column;
@@ -653,14 +667,14 @@ main .formulario {
     align-items: center;
     width: 80vw;
     margin: 0 0 0 35px;
-    }
+  }
 
   .fotoPerfil {
     /* margin: 80px 20px 0 285px; */
     width: 415px;
     margin: 0 0px 0 0;
-    }
-    
+  }
+
   .textPerfil {
     display: flex;
     flex-direction: column;
@@ -671,11 +685,9 @@ main .formulario {
   .textDescripcion {
     width: 80vw;
   }
-}
 
-/* SERVICIOS */
+  /* SERVICIOS */
 
-@media (max-width: 415px) {
   .placaServ {
     display: flex;
     flex-direction: column;
