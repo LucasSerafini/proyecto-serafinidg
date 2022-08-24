@@ -27,7 +27,6 @@
   background-color: #ece5f0;
   /* background-image: linear-gradient(to bottom, #a39c8e, #c8c4d700); */
   /* background-image: linear-gradient(90deg, #FAD961 0%, #F76B1C 100%); */
-
   font-weight: 500;
   padding: 25px 50px 25px 50px;
   position: sticky;
@@ -39,7 +38,8 @@
 .header .nav .listaPrincipal {
   display: flex;
   list-style-type: none;
-  /* flex-wrap: wrap; */
+  align-items: center;
+  justify-content: center;
 }
 .header .nav .listaPrincipal li a {
   font-size: 80%;
@@ -51,7 +51,6 @@
 
 .header .nav .listaPrincipal li a:hover {
   color: #f39200;
-  transform: scale(1.5);
   transition: 0.3s;
   }
   
