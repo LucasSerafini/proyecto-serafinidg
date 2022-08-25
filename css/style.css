@@ -18,6 +18,42 @@
 /* #ece5f0 */
 /* #E98A15 */
 
+/* HEADER BOOPSTRAP */
+/* NAV */
+.header-nav { 
+  position: sticky;
+  top: 0;
+  z-index: 3;
+}
+
+.page-html {
+  font-size: 100%;
+  font-weight: 500 !important;
+  text-decoration: none;
+  color: rgb(31, 28, 28);
+  margin: 0 25px 0 0;
+}
+
+.page-html a:hover {
+  color: #f39200 !important;
+  transition: 0.3s !important;
+}
+
+.quiensoy { 
+  font-size: 200%;
+  color: #ece5f0;
+}
+
+.subtitulos-banner{ 
+  color: #ece5f0;
+}
+
+.colorFlechas {
+  color: white !important;
+}
+
+
+
 /* HEADER */
 
 .header {
@@ -25,8 +61,6 @@
   justify-content: center;
   align-items: center;
   background-color: #ece5f0;
-  /* background-image: linear-gradient(to bottom, #a39c8e, #c8c4d700); */
-  /* background-image: linear-gradient(90deg, #FAD961 0%, #F76B1C 100%); */
   font-weight: 500;
   padding: 25px 50px 25px 50px;
   position: sticky;
@@ -52,8 +86,8 @@
 .header .nav .listaPrincipal li a:hover {
   color: #f39200;
   transition: 0.3s;
-  }
-  
+}
+
 .header .logoSerafini {
   padding: 0 75px 0 0;
 }
@@ -220,7 +254,7 @@ select {
   font-family: "Montserrat", sans-serif;
 }
 
-.flex-formulario .formulario .input { 
+.flex-formulario .formulario .input {
   border-radius: 20px;
 }
 
@@ -281,22 +315,27 @@ select {
   height: 130px;
   background-color: #ece5f0;
   width: 100vw;
-  position: static;
-  bottom: 0;
+  
+  justify-content: center;
+  align-items: center;
 }
 
 .footer .listFooter {
   display: flex;
   justify-content: center;
   padding: 25px;
-
+margin-bottom: 0 !important;
   /* background-image: linear-gradient(to top, #a39c8e, #c8c4d700); */
   list-style-type: none;
 }
 
 .iconosRedes {
+  width: 25px;
+  margin: 5px;
+}
+
+.logoFooter img{ 
   width: 40px;
-  margin: 10px;
 }
 
 /* MEDIA QUERYS */
@@ -396,6 +435,13 @@ select {
     width: 80vw;
   }
 }
+
+/*  */
+@media (max-width: 992px) { 
+  
+}
+
+
 
 /* 930PX - GALERIA PORTFOLIO*/
 
