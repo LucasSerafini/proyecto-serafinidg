@@ -14,6 +14,8 @@
 
 <body>
 
+    <!-- HEADER  -->
+
     <nav class="navbar navbar-expand-lg bg-light header-nav">
         <div class="container-fluid">
             <div class="logo-serafini m-4">
@@ -29,7 +31,7 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0 listaPrincipal">
                     <li class="nav-item">
-                        <a class="nav-link page-html" aria-current="page" href="#">Home</a>
+                        <a class="nav-link page-html" aria-current="page" href="./index.html">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link page-html" href="./pages/sobremi.html">Sobre mi</a>
@@ -48,92 +50,23 @@
         </div>
     </nav>
 
-    <!-- <header class="header">
-        <div class="logoSerafini">
-            <a href="./index.html">
-                <img src="./images/logo.png" alt="Logo SERAFINI">
-            </a>
-        </div>
-        <nav class="nav">
-            <ul class="listaPrincipal">
-                <li>
-                    <a href="./index.html">HOME</a>
-                </li>
-                <li>
-                    <a href="./pages/sobremi.html">SOBRE MI</a>
-                </li>
-                <li>
-                    <a href="./pages/servicios.html">SERVICIOS</a>
-                </li>
-                <li>
-                    <a href="./pages/portfolio.html">PORTFOLIO</a>
-                </li>
-                <li>
-                    <a href="./pages/contacto.html">CONTACTO</a>
-                </li>
-            </ul>
-        </nav>
-    </header> -->
-
-    <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
-        <div class="carousel-indicators">
-            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"
-                aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1"
-                aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2"
-                aria-label="Slide 3"></button>
-        </div>
-        <div class="carousel-inner">
-            <div class="carousel-item active" data-bs-interval="10000">
-                <img src="./images/banner.jpg" class="d-block w-100" alt="...">
-                <div class="carousel-caption d-none d-md-block">
-                    <h1 class="quiensoy">¡Bienvenidx!</h1>
-                    <h2 class="subtitulos-banner">Me presento, mi nombre es Lucas Sebastian Serafini</h2>
-                </div>
-            </div>
-            <div class="carousel-item" data-bs-interval="2000">
-                <img src="./images/banner-02.jpg" class="d-block w-100" alt="...">
-                <div class="carousel-caption d-none d-md-block">
-                    <h1 class="quiensoy">FOTOGRAFIA</h1>
-                    <h2 class="subtitulos-banner">Realizo sesiones de fotos y videos con drone</h2>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <img src="./images/banner-03.jpg" class="d-block w-100" alt="...">
-                <div class="carousel-caption d-none d-md-block">
-                    <h1 class="quiensoy">¡Hola! ¡Bienvenidx!</h1>
-                    <h2 class="subtitulos-banner">Me presento, mi nombre es Lucas Sebastian Serafini</h2>
-                </div>
-            </div>
-        </div>
-        <button class="carousel-control-prev colorFlechas" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-        </button>
-    </div>
-
     <!-- CONTENIDO -->
 
-    <!-- <main>
+    <main>
         <section class="banner">
-            <article class="presentacionBanner">Mi nombre es Lucas Serafini y realizo...</article>
-            <div class="servicio-banner">
-                <article class="realizo1">DISEÑO</article>
-                <article class="realizo1">GRÁFICO</article>
-            </div>
-            <a href="./pages/portfolio.html">
-                <input type="button" value="IR A MIS TRABAJOS" class="boton">
-            </a>
-            <div class="imagenBanner">
+            <div class="contenido-banner">
+                <article class="presentacionBanner">Mi nombre es Lucas Serafini y realizo...</article>
+                <div class="servicio-banner">
+                    <article class="realizo1">DISEÑO</article>
+                    <article class="realizo1">GRÁFICO</article>
+                </div>
+                <a href="./pages/portfolio.html">
+                    <button type="button" class="btn btn-light">IR A MIS TRABAJOS</button>
+                </a>
             </div>
         </section>
     </main>
-   -->
+
     <footer class="footer">
         <ul class="listFooter">
             <li>
@@ -151,6 +84,7 @@
             <img src="./images/logo-footer.png" alt="Logo Footer">
         </div>
     </footer>
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"

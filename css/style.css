@@ -20,77 +20,55 @@
 
 /* HEADER BOOPSTRAP */
 /* NAV */
-.header-nav { 
+.header-nav {
   position: sticky;
   top: 0;
   z-index: 3;
+  width: 100vw;
 }
 
 .page-html {
-  font-size: 100%;
+  font-size: 90%;
   font-weight: 500 !important;
   text-decoration: none;
   color: rgb(31, 28, 28);
-  margin: 0 25px 0 0;
+  margin: 0 20px 0 20px;
 }
 
-.page-html a:hover {
-  color: #f39200 !important;
-  transition: 0.3s !important;
+.navbar-nav {
+  --bs-nav-link-hover-color: #f39200;
 }
 
-.quiensoy { 
-  font-size: 200%;
-  color: #ece5f0;
-}
+/* FOOTER */
 
-.subtitulos-banner{ 
-  color: #ece5f0;
-}
-
-.colorFlechas {
-  color: white !important;
-}
-
-
-
-/* HEADER */
-
-.header {
+.footer {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: row;
+  height: 100px;
   background-color: #ece5f0;
-  font-weight: 500;
-  padding: 25px 50px 25px 50px;
-  position: sticky;
-  top: 0;
-  height: 17vh;
   width: 100vw;
-  z-index: 20;
-}
-.header .nav .listaPrincipal {
-  display: flex;
-  list-style-type: none;
-  align-items: center;
   justify-content: center;
+  align-items: center;
 }
-.header .nav .listaPrincipal li a {
-  font-size: 80%;
-  margin: 0 35px 0 35px;
-  font-weight: 700;
-  text-decoration: none;
-  color: rgb(31, 28, 28);
-}
-
-.header .nav .listaPrincipal li a:hover {
-  color: #f39200;
-  transition: 0.3s;
+.footer .listFooter {
+  display: flex;
+  justify-content: center;
+  padding: 25px;
+  margin-bottom: 0 !important;
+  /* background-image: linear-gradient(to top, #a39c8e, #c8c4d700); */
+  list-style-type: none;
 }
 
-.header .logoSerafini {
-  padding: 0 75px 0 0;
+.iconosRedes {
+  width: 25px;
+  margin: 5px;
 }
+
+.logoFooter img {
+  width: 40px;
+}
+
+/* TITULOS Y SUBTITULOS */
 
 .titulos {
   font-family: "Poppins", sans-serif;
@@ -109,26 +87,23 @@ h2 {
 /* INDEX/HOME */
 
 .banner {
+  background-image: url(../images/banner.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.contenido-banner {
   display: flex;
-  align-items: center;
-  justify-content: center;
   flex-direction: column;
-  height: 66vh;
-  z-index: 2;
-  background-color: #2b2b2b;
-}
-
-.imagenBanner {
-  width: 100%;
-  z-index: -10;
-  position: absolute;
-  top: 0;
-  overflow: hidden;
+  justify-content: center;
   align-items: center;
-  background-color: #635d52;
+  overflow: hidden;
+  min-height: 530px;
+  z-index: 2;
+  padding: 50px 0 0 0;
 }
 
-.banner .presentacionBanner {
+.presentacionBanner {
   z-index: 2;
   font-size: 100%;
   color: white;
@@ -136,6 +111,7 @@ h2 {
 
 .servicio-banner {
   display: flex;
+  z-index: 2;
 }
 
 .realizo1 {
@@ -143,15 +119,10 @@ h2 {
   font-size: 800%;
   margin: 13px;
   color: white;
-}
-
-.boton {
-  border-radius: 30px;
-  width: 200px;
-  height: 30px;
-  background-color: #003b36;
-  color: white;
-  margin: 10px 0 0 0;
+  z-index: -1;
+  animation-name: diseño-grafico;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
 }
 
 /* SOBRE MI */
@@ -164,7 +135,6 @@ h2 {
 }
 .fotoPerfil {
   /* margin: 80px 20px 0 285px; */
-  height: 300px;
   height: 500px;
   margin: 0 80px 0 0;
 }
@@ -189,6 +159,7 @@ h2 {
   display: flex;
   flex-direction: column;
   margin: 0 0 40px 0;
+  min-height: calc(100vh - 120px - 130px);
 }
 
 .container-galeria {
@@ -281,7 +252,7 @@ select {
   margin: 20px;
   padding: 20px;
   width: 300px;
-  height: 550px;
+  height: auto;
   background-color: #ece5f0;
 }
 
@@ -307,41 +278,25 @@ select {
   padding: 20px;
 }
 
-/* FOOTER */
-
-.footer {
-  display: flex;
-  flex-direction: row;
-  height: 130px;
-  background-color: #ece5f0;
-  width: 100vw;
-  
-  justify-content: center;
-  align-items: center;
-}
-
-.footer .listFooter {
-  display: flex;
-  justify-content: center;
-  padding: 25px;
-margin-bottom: 0 !important;
-  /* background-image: linear-gradient(to top, #a39c8e, #c8c4d700); */
-  list-style-type: none;
-}
-
-.iconosRedes {
-  width: 25px;
-  margin: 5px;
-}
-
-.logoFooter img{ 
-  width: 40px;
+@keyframes diseño-grafico {
+  0% {
+    color: #ece5f05f;
+  }
+  50% {
+    color: #ece5f0;
+  }
+  100% {
+    color: #ece5f05f;
+  }
 }
 
 /* MEDIA QUERYS */
 /* formulario 1200 */
 
 @media (max-width: 1070px) {
+
+/* CONTACTO 1200 */
+
   .logoParaleloForm {
     display: none;
   }
@@ -349,10 +304,10 @@ margin-bottom: 0 !important;
   .flex-formulario {
     display: flex;
     justify-content: space-between;
-    margin: 0 50px 0 0;
-    width: 70vw;
+    margin: 25px 50px 0 0;
+    width: auto;
     justify-content: center;
-  }
+      }
 
   main .formulario {
     display: flex;
@@ -360,6 +315,7 @@ margin-bottom: 0 !important;
     font-family: "Montserrat", sans-serif;
     font-size: 100%;
     margin: 0 0 0 150px;
+    flex-wrap: wrap;
   }
 }
 
@@ -415,13 +371,12 @@ margin-bottom: 0 !important;
     justify-content: center;
     align-content: center;
     width: 80vw;
-    margin: 0 0 0 35px;
-  }
+    padding: 25px;
+   }
 
   .fotoPerfil {
-    /* margin: 80px 20px 0 285px; */
     width: 415px;
-    margin: 0 0px 0 0;
+    margin: 25px 0px 25px 0;
   }
 
   .textPerfil {
@@ -429,6 +384,7 @@ margin-bottom: 0 !important;
     flex-direction: column;
     flex-wrap: wrap;
     margin: 15px 0 0 0;
+    padding: 0 0 0 50px;
   }
 
   .textDescripcion {
@@ -437,11 +393,8 @@ margin-bottom: 0 !important;
 }
 
 /*  */
-@media (max-width: 992px) { 
-  
+@media (max-width: 992px) {
 }
-
-
 
 /* 930PX - GALERIA PORTFOLIO*/
 
@@ -624,17 +577,23 @@ margin-bottom: 0 !important;
   .flex-formulario {
     display: flex;
     justify-content: center;
-    margin: 0 5px 0 70px;
+    margin: 0;
+   
   }
 
   main .formulario {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     font-family: "Montserrat", sans-serif;
     font-size: 100%;
-    margin: 0 0 0 0;
-    width: 500px;
+    width: 100%;
+     
   }
+  textarea {
+    resize: vertical;
+    width: 100%;
+
 }
 
 /* HEADER 415PX */
@@ -724,17 +683,9 @@ margin-bottom: 0 !important;
     width: 80vw;
     margin: 0 0 0 35px;
   }
-
-  .fotoPerfil {
-    /* margin: 80px 20px 0 285px; */
-    width: 415px;
-    margin: 0 0px 0 0;
-  }
-
   .textPerfil {
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
     margin: 15px 0 0 0;
   }
 
@@ -748,7 +699,7 @@ margin-bottom: 0 !important;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 20px;
+    margin: 15px 0 15px 0;
     padding: 20px;
     width: 100vw;
     height: auto;
